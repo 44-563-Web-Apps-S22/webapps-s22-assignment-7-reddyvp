@@ -57,7 +57,7 @@
                 <div class="col-sm-auto" style="background-color:rgb(109, 109, 216);"><img class="img-thumbnail" src="tree.jpg" id="24" height="200" width="200"></div>
             </div>
           </div>
-          <button type="button" class="btn btn-primary" onclick="reset()">Reset</button>
+          <button type="button" class="btn btn-warning" onclick="reset()">Reset</button>
           <script>
               let ids = ["0", "1", "2", "3", "4", "5", "6", "7", "8",
                   "9", "10", "11", "12", "13", "14", "15", "16",
@@ -68,12 +68,12 @@
                   let id = ids[position];
                   let image = document.getElementById(position);
                   if (position == birdLocation) {
-                      image.src = "Avocet.jpg";
+                      image.src = "eagle.jpg";
                   } else {
                       image.src = "nest.jpg";
                   }
                   shakeCount++;
-                  document.getElementById("shakes").innerHTML = "Number of shakes is " + shakeCount;
+                  document.getElementById("shakes").innerHTML = "Number of shakes are: " + shakeCount;
                   document.getElementById("score").innerHTML = "Location score is: " + locationScore(position, birdLocation);
               }
       
@@ -111,8 +111,8 @@
               function reset() {
                   let birdLocation = Math.floor(Math.random() * 25);
                   shakeCount = 0;
-                  document.getElementById("shakes").innerHTML = "Number of shakes is " + shakeCount;
-                  document.getElementById(birdLocation).src = "Avocet.jpg";
+                  document.getElementById("shakes").innerHTML = "Number of shakes are " + shakeCount;
+                  document.getElementById(birdLocation).src = "eagle.jpg";
               }
           </script>
 </body>
